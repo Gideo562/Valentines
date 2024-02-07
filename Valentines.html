@@ -1,0 +1,33 @@
+<doctype hmtl>
+    <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body>
+        <script>
+            
+            var body = document.getElementsByTagName("body")[0];
+
+            function yesFunction(){
+                document.getElementById("yes").innerHTML = "cool";
+            }
+
+            function noFunction(){
+                document.document.getElementById("no").innerHTML = "but y";
+                if (document.document.getElementById("no").value==="but y"){
+                    document.document.getElementById("no").innerHTML = "meow";
+                }
+            }
+
+
+        </script>
+    <div class="valentines">    
+        <h1 id="pageTitle">Will you be my valentine?</h1>
+        <img src="img/kissingBear.gif" alt="bear running to get a kiss">
+    </div>
+        <div class="buttons">
+            <button onclick="yesFunction()"><label id="yes">Yes</label></button>
+            <button onclick="noFunction()"><label id="no">No</label></button>
+        </div>
+    </body>
+    </html>

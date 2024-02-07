@@ -1,0 +1,19 @@
+body {
+    background-color: pink;
+}
+
+.valentines {
+    text-align: center;
+}
+
+img {
+    opacity: 0;
+}
+
+.buttons{
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
