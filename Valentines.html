@@ -6,28 +6,58 @@
     <body>
         <script>
             
-            var body = document.getElementsByTagName("body")[0];
+            var clickCount = 0;
+
+            const noResponse = ["but y :(","y tho", "woof", "bork", "im lonely"];
+
 
             function yesFunction(){
-                document.getElementById("yes").innerHTML = "cool";
-            }
+                document.getElementById("pageTitle").innerHTML = "kewl";
+                document.getElementById("image").src = "img/kissingBear.gif";
+                document.getElementById("image").style.opacity = 100;
+                document.getElementById("yes").style.opacity = 0;
+                document.getElementById("no").style.opacity = 0;
+                document.getElementById("yesButton").style.opacity = 0;
+                document.getElementById("noButton").style.opacity = 0;
+
+            };
 
             function noFunction(){
-                document.document.getElementById("no").innerHTML = "but y";
-                if (document.document.getElementById("no").value==="but y"){
-                    document.document.getElementById("no").innerHTML = "meow";
+
+                document.getElementById("no").innerHTML = noResponse[clickCount%noResponse.length];
+
+                if(clickCount == 0){
+                    document.getElementById("yesButton").style.height = "250px";
+                    document.getElementById("yesButton").style.width = "350px";
+                    document.getElementById("noButton").style.width = "100px";
+                    document.getElementById("noButton").style.height = "100px";
+                    document.getElementById("no").style.fontSize = "10px";
+                    document.getElementById("yes").style.fontSize = "50px";
+                } else if(clickCount === 1){
+                    document.getElementById("yesButton").style.height = "350px";
+                    document.getElementById("yesButton").style.width = "350px";
+                    document.getElementById("noButton").style.width = "50px";
+                    document.getElementById("noButton").style.height = "50px";
+                    document.getElementById("no").style.fontSize = "10px";
+                } else if(clickCount > 20){
+                    document.getElementById("noButton").style.opacity = "0";
+                    document.getElementById("no").style.opacity = "0";
                 }
-            }
+                clickCount+=1;
+
+             };
 
 
         </script>
     <div class="valentines">    
         <h1 id="pageTitle">Will you be my valentine?</h1>
-        <img src="img/kissingBear.gif" alt="bear running to get a kiss">
+        <img src="img/sendingLoveBear.gif" alt="bear running to get a kiss" id="image">
     </div>
-        <div class="buttons">
-            <button onclick="yesFunction()"><label id="yes">Yes</label></button>
-            <button onclick="noFunction()"><label id="no">No</label></button>
+        <div class="yesButtonDiv">
+            <button  id="yesButton" onclick="yesFunction()"><label id="yes">Yes</label></button>
+        </div>
+        <div class="noButtonDiv">
+            <button id="noButton" onclick="noFunction()"><label id="no">No</label></button>
         </div>
     </body>
     </html>

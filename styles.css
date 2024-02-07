@@ -1,5 +1,6 @@
 body {
     background-color: pink;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .valentines {
@@ -7,13 +8,47 @@ body {
 }
 
 img {
-    opacity: 0;
+    opacity: 100;
 }
 
-.buttons{
+#yesButton{
+    background-color: green;
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    border: none;
+}
+
+#yes {
+    color: white;
+    font-size: 20px;
+}
+
+.yesButtonDiv{
     display: block;
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
+    width: fit-content;
+}
+
+#noButton{
+    background-color: red;
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    border: none;
+}
+
+.noButtonDiv {
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+#no {
+    color: white;
+    font-size: 20px;
 }
